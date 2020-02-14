@@ -67,4 +67,4 @@ The "jack.**track**()" function is where the magic happens. Let's break it down:
     
 Let's take a look at the Windows side again to see what that gets us:
 
-  
+![#NumberJack Application](https://i.imgur.com/O45i6w2.png)
