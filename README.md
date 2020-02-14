@@ -58,11 +58,13 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
 The "jack.**track**()" function is where the magic happens. Let's break it down:
 
     jack.track(
-      &blink_state*, // The variable to track (A reference, anyways)
-      t_bool*,       // The data type - in this case a boolean
+      &blink_state,  // The variable to track (A reference, anyways)
+      t_bool,        // The data type - in this case a boolean
       "Blink State", // The "Pretty Name" of this variable to be seen in the app
       "Output",      // The "Pretty Name" of the category this variable belongs to
       TRIGGERED      // A built-in alias for true, means this variable will be auto-reported by default
     );
     
-f
+Let's take a look at the Windows side again to see what that gets us:
+
+  
