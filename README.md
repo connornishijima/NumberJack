@@ -55,7 +55,7 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
       jack.update();
     }
 
-The "jack.**track()** function is where the magic happens. Let's break it down:
+The "jack.**track**()" function is where the magic happens. Let's break it down:
 
     jack.track(
       &blink_state*, // The variable to track (A reference, anyways)
