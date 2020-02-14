@@ -18,8 +18,11 @@ NumberJack uses a special reporting syntax for when it needs to send variables. 
 Once connected to this software, here is the handshake between (W)indows and (M)icrocontroller:
 
 W: **$NP?** *(is Numberjack Present on this device?)*
+
 C: **$NP!** *(NumberJack is running!)*
+
 C: **$NM|TIME=0,SENSOR=1|seconds=0,pressure=1,motion=2|001** *(variable Map response)*
+
 C: **$NLV|10100** *(NumberJack Library Version: 1.1.0)*
 
 
