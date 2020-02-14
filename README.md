@@ -15,14 +15,15 @@ NumberJack uses a special reporting syntax for when it needs to send variables. 
 - The analog value of A0, where a **pressure** *SENSOR* is connected
 - The boolean value of Pin 13, where a **motion** detector is connected; another *SENSOR*
 
-Once connected to this software, here is the handshake between (W)indows and (M)icrocontroller:
+**Once connected to this software, here is the handshake between (W)indows and (M)icrocontroller:**
 
 W: **$NP?** *(is Numberjack Present on this device?)*
 
 C: **$NP!** *(NumberJack is running!)*
 
-C: **$NM|TIME=0,SENSOR=1|seconds=0,pressure=1,motion=2|001** *(variable Map response)*
+W: **$NRM** *(Request map of variables)*
+
+C: **$NM|TIME=0,SENSOR=1|seconds=0,pressure=1,motion=2|001** *(Variable map response)*
 
 C: **$NLV|10100** *(NumberJack Library Version: 1.1.0)*
-
 
