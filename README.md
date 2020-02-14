@@ -27,3 +27,28 @@ C: **$NM|TIME=0,SENSOR=1|seconds=0,pressure=1,motion=2|001** *(Variable map resp
 
 C: **$NLV|10100** *(NumberJack Library Version: 1.1.0)*
 
+That "**$NM**" line is an important feature of NumberJack. You can combine Variables into Categories while writing your software. This way, if you have more than one type of device with NumberJack on it they can each get customized labels and sections within the GUI.
+
+## Seems like a lot of work...
+
+Nope! Just one start line in **setup()**, one update in **loop()**, and one more line in **setup()** for every variable you want to track! Here's a version of the Arduino Blink.ino sketch with NumberJack added:
+
+    #include <NumberJack.h>
+    NumberJack jack;
+    
+    bool blink_state = false; // Our variable to track
+    
+    void setup() {
+      jack.begin(230400);
+      pinMode(LED_BUILTIN, OUTPUT);
+      jack.track(blink_state, t_bool, "Blink State", "Output", TRIGGERED);
+    }
+
+    void loop() {
+      if(millis() % 1000 == 0){
+        blink_state = !blink_state;
+        digitalWrite(LED_BUILTIN, blink_state);
+        delay(1);
+      }
+      jack.update();
+    }
