@@ -43,7 +43,7 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
     void setup() {
       jack.begin(230400);
       pinMode(LED_BUILTIN, OUTPUT);
-      jack.track(blink_state, t_bool, "Blink State", "Output", TRIGGERED);
+      jack.track(&blink_state, t_bool, "Blink State", "Output", TRIGGERED);
     }
 
     void loop() {
@@ -55,4 +55,14 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
       jack.update();
     }
 
-The "jack.**track()** function is where the magic happens.
+The "jack.**track()** function is where the magic happens. Let's break it down:
+
+    jack.track(
+      &blink_state*, // The variable to track (A reference, anyways)
+      t_bool*,       // The data type - in this case a boolean
+      "Blink State", // The "Pretty Name" of this variable to be seen in the app
+      "Output",      // The "Pretty Name" of the category this variable belongs to
+      TRIGGERED      // A built-in alias for true, means this variable will be auto-reported by default
+    );
+    
+f
