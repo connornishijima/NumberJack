@@ -27,7 +27,9 @@ C: **$NM|TIME=0,SENSOR=1|seconds=0,pressure=1,motion=2|001** *(Variable map resp
 
 C: **$NLV|10100** *(NumberJack Library Version: 1.1.0)*
 
-That "**$NM**" line is an important feature of NumberJack. You can combine Variables into Categories while writing your software. This way, if you have more than one type of device with NumberJack on it they can each get customized labels and sections within the GUI.
+That "**$NM**" line is an important feature of NumberJack. You can combine Variables into Categories while writing your software. This way, if you have more than one type of device with NumberJack on it they can each get customized labels and sections within the GUI. These "Pretty Names" are sent upfront, and from then on they are referred to by IDs like 0,1,2,3,etc....
+
+This keeps Serial traffic to the bare minimum!
 
 ## Seems like a lot of work...
 
@@ -52,3 +54,5 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
       }
       jack.update();
     }
+
+The "jack.**track()** function is where the magic happens.
