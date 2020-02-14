@@ -41,7 +41,7 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
     bool blink_state = false; // Our variable to track
     
     void setup() {
-      jack.begin(230400);
+      jack.begin(230400,1);
       pinMode(LED_BUILTIN, OUTPUT);
       jack.track(&blink_state, t_bool, "Blink State", "Output", TRIGGERED);
     }
