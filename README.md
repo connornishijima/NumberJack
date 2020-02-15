@@ -58,7 +58,7 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
 The "jack.**track**()" function is where the magic happens. Let's break it down:
 
     jack.track(
-      &blink_state,  // The variable to track (A reference (&) to it's location in memory, actually)
+      &blink_state,  // The variable to track (A pointer/reference (&) to it's location in memory, actually)
       t_bool,        // The data type - in this case a boolean
       "Blink State", // The "Pretty Name" of this variable to be seen in the app
       "Output",      // The "Pretty Name" of the category this variable belongs to
