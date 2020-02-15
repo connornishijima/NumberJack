@@ -7,7 +7,7 @@ Simple, lightweight live debugging for Arduino/ESP8266!
 
 Yes, but no. **NumberJack does things a little differently.** Most Serial debugging libraries print *all* information available so that an application can filter through it, whereas NumberJack sends **absolutely nothing** until the Windows app tells it which variables it should do live tracking on. This way your debugging tools can be left in production products and there's just a microscopic tax on the CPU since it won't spend any time printing NumberJack output when it's not connected.
 
-## And when it *does* print? Will that slow my controller down to keep sending information?
+### And when it *does* print? Will that slow my controller down to keep sending information?
 
 NumberJack uses a special reporting syntax for when it needs to send variables. Let's say we have three we want to track:
 
@@ -31,7 +31,7 @@ That "**$NM**" line is an important feature of NumberJack. You can combine Varia
 
 This keeps Serial traffic to the bare minimum!
 
-## Seems like a lot of work...
+### Seems like a lot of work...
 
 Nope! Just one start line in **setup()**, one update in **loop()**, and one more line in **setup()** for every variable you want to track! Here's a version of the Arduino Blink.ino sketch with NumberJack added:
 
