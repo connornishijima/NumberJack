@@ -69,7 +69,7 @@ Let's take a look at the Windows side again to see what that gets us:
 
 ![#NumberJack Application](https://i.imgur.com/O45i6w2.png)
 
-On the left, we now see our variable "Blink State" and its live value. On the right is that "minimal" Serial output we discussed. Because "Triggering" was enabled on the blink_state variable, whenever its value is changed an update is sent to the debugger. (And never sent when it isn't - big savings on CPU time!)
+On the left, we now see our variable "Blink State" and its live value inside our new category "Output". On the right is that "minimal" Serial output we discussed. Because "Triggering" was enabled on the blink_state variable, whenever its value has changed an update is sent to the debugger. (And never sent when it isn't - big savings on CPU time!)
 
 These updates are shown in the Serial Monitor as:
 
