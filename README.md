@@ -58,7 +58,7 @@ Nope! Just one start line in **setup()**, one update in **loop()**, and one more
 The "jack.**track**()" function is where the magic happens. Let's break it down:
 
     jack.track(
-      &blink_state,  // The variable to track (A reference, anyways)
+      &blink_state,  // The variable to track (A reference (&) to it's location in memory, actually)
       t_bool,        // The data type - in this case a boolean
       "Blink State", // The "Pretty Name" of this variable to be seen in the app
       "Output",      // The "Pretty Name" of the category this variable belongs to
@@ -68,3 +68,22 @@ The "jack.**track**()" function is where the magic happens. Let's break it down:
 Let's take a look at the Windows side again to see what that gets us:
 
 ![#NumberJack Application](https://i.imgur.com/O45i6w2.png)
+
+On the left, we now see our variable "Blink State" and it's live value. On the right is that "minimal" Serial output we discussed. Because "Triggering" was enabled on the blink_state variable, whenever its value is changed an update is sent to the debugger. (And never sent when it isn't - big savings on CPU time!)
+
+These updates are shown in the Serial Monitor as:
+
+    $NV|0|0|0
+    $NV|0|0|1
+    $NV|0|0|0
+    $NV|0|0|1
+    etc...
+
+This is a highly simplified way of your Arduino saying:
+
+    $NumberJack Variable | with ID 0 | in Category ID 0 | has changed to 0
+    $NumberJack Variable | with ID 0 | in Category ID 0 | has changed to 1
+    $NumberJack Variable | with ID 0 | in Category ID 0 | has changed to 0
+    $NumberJack Variable | with ID 0 | in Category ID 0 | has changed to 1
+    etc...
+
