@@ -33,7 +33,7 @@ This keeps Serial traffic to the bare minimum!
 
 ### Seems like a lot of work...
 
-Nope! Just one start line in **setup()**, one update in **loop()**, and one more line in **setup()** for every variable you want to track! Here's a version of the Arduino Blink.ino sketch with NumberJack added:
+Nope! (Man, you're skeptical today) Just one start line in **setup()**, one update in **loop()**, and one more line in **setup()** for every variable you want to track! Here's a version of the Arduino Blink.ino sketch with NumberJack added:
 
     #include <NumberJack.h>
     NumberJack jack;
