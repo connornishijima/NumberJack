@@ -1,3 +1,5 @@
+![NUMBERJACK](img/NumberJack.jpg)
+
 # NumberJack
 Simple, lightweight live debugging for Arduino/ESP8266!
 
