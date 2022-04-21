@@ -1,6 +1,13 @@
 # NumberJack
 Simple, lightweight live debugging for Arduino/ESP8266!
 
+----------------------------------------------------------------------------------
+
+# NOTE:
+This was a project I intended to finish in 2020, but never did. The idea has pivoted quite far from the original since then, and this repo will slowly transform soon into a new, better system under the same name. Due to limitations, I have no intent of releasing the original project at this time, as the new version will easily out-pace it.
+
+----------------------------------------------------------------------------------
+
 ![#NumberJack Library](https://i.imgur.com/f0o1glZ.png)
 
 ## *Another* Serial Debugger?
